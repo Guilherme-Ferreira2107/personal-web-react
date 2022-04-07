@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const WrapperPresentation = styled.section`
   width: 100%;
   height: calc(100% - 80px);
+  min-height: 600px;
   display: flex;
   justify-content: space-between;
 `;
@@ -46,7 +47,7 @@ export const ContentPresentation = styled.div`
     @media (min-width: 768px) {
       font-size: 10rem;
       letter-spacing: 0.2rem;
-      line-height: 7.05rem;
+      line-height: 7.15rem;
     }
   }
 

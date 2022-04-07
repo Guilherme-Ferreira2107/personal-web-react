@@ -4,6 +4,7 @@ export const WrapperAside = styled.aside`
   position: relative;
   width: 100px;
   height: 100vh;
+  min-height: 600px;
   background-color: #2b2b2b;
 
   display: flex;

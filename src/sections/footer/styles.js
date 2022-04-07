@@ -4,7 +4,6 @@ export const WrapperFooter = styled.footer`
   width: 100%;
   padding: 20px;
   text-align: center;
-  background-color: rgba(10, 10, 10, 0.9);
 
   a {
     color: #0093e9;

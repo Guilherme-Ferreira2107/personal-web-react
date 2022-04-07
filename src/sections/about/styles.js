@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const WrapperAbout = styled.section`
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.9);
   padding: 80px 20px;
 
   @media (min-width: 768px) {
@@ -68,6 +67,21 @@ export const ContentAbout = styled.div`
     font-weight: 500;
     font-size: 10rem;
     color: rgba(55, 55, 55, 0.4);
+    animation-name: animateBackground;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+
+    @keyframes animateBackground {
+      0% {
+        left: 0px;
+      }
+      50% {
+        left: -200px;
+      }
+      100% {
+        left: 0px;
+      }
+    }
 
     @media (min-width: 768px) {
       font-size: 18rem;

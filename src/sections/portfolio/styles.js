@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const WrapperPortfolio = styled.section`
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.9);
   padding: 80px 20px;
 
   @media (min-width: 768px) {
@@ -84,7 +83,59 @@ export const ContentPortfolio = styled.div`
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
     font-size: 4rem;
-    color: rgba(55, 55, 55, 0.2);
+    color: rgba(255, 255, 255, 0.1);
+    animation-name: animateBackground;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+
+    @keyframes animateBackground {
+      0% {
+        left: 0px;
+      }
+      50% {
+        left: -200px;
+      }
+      100% {
+        left: 0px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      font-size: 10rem;
+      margin: -5% 0 0 -5%;
+    }
+
+    @media (min-width: 976px) {
+      font-size: 16rem;
+    }
+  }
+
+  &:after {
+    content: "PORTFÓLIO";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    margin: -50% 0 0 -20%;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);
+    animation-name: animateBackground;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+
+    @keyframes animateBackground {
+      0% {
+        left: -200px;
+      }
+      50% {
+        left: 0px;
+      }
+      100% {
+        left: -200px;
+      }
+    }
 
     @media (min-width: 768px) {
       font-size: 10rem;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const WrapperContact = styled.section`
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.9);
   padding: 80px 20px;
 
   @media (min-width: 768px) {
