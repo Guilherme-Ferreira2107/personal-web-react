@@ -65,7 +65,7 @@ export const ContentContact = styled.div`
 
 export const ContentThanks = styled.div`
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 
   p {
     font-size: 1.5rem;

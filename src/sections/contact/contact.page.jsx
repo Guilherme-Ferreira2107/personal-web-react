@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <WrapperContact id="contacts">
       <h1>
-        ENTRE EM <span>CONTATO</span>
+        ENTRE <span>EM CONTATO</span>
       </h1>
       <ContentContact>
         <ContentThanks>
