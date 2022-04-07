@@ -48,8 +48,8 @@ export const ContentPortfolio = styled.div`
 
     h4 {
       font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.5);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
       margin: 10px 0;
     }
 
