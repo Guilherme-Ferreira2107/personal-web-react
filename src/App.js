@@ -1,4 +1,11 @@
-import { Header, Presentation, About, Portfolio, Footer } from "./sections";
+import {
+  Header,
+  Presentation,
+  About,
+  Portfolio,
+  Footer,
+  Contact,
+} from "./sections";
 import { Wrapper } from "./styles";
 
 function App() {
@@ -8,6 +15,7 @@ function App() {
       <Presentation />
       <About />
       <Portfolio />
+      <Contact />
       <Footer />
     </Wrapper>
   );
