@@ -85,7 +85,7 @@ export const ContentPortfolio = styled.div`
     font-size: 4rem;
     color: rgba(255, 255, 255, 0.1);
     animation-name: animateBackground;
-    animation-duration: 120s;
+    animation-duration: 90s;
     animation-iteration-count: infinite;
 
     @keyframes animateBackground {
@@ -122,7 +122,7 @@ export const ContentPortfolio = styled.div`
     font-size: 4rem;
     color: rgba(255, 255, 255, 0.1);
     animation-name: animateBackground;
-    animation-duration: 120s;
+    animation-duration: 90s;
     animation-iteration-count: infinite;
 
     @keyframes animateBackground {

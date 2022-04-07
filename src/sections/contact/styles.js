@@ -68,7 +68,12 @@ export const ContentThanks = styled.div`
   margin-bottom: 20px;
 
   p {
+    font-size: 1.5rem;
     margin-bottom: 20px;
+  }
+
+  small {
+    font-size: 1.1rem;
   }
 `;
 
@@ -78,6 +83,11 @@ export const ContentContacts = styled.div`
 
   svg {
     margin-bottom: -2px;
+  }
+
+  p,
+  h4 {
+    font-size: 1.5rem;
   }
 
   p {

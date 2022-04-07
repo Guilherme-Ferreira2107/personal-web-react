@@ -37,7 +37,6 @@ export const ContentAbout = styled.div`
 
   p,
   span {
-    font-family: "Barlow Condensed", sans-serif;
     font-size: 1rem;
     font-weight: 300;
     position: relative;
@@ -47,7 +46,7 @@ export const ContentAbout = styled.div`
       font-size: 1.2rem;
     }
 
-    @media (min-width: 768) {
+    @media (min-width: 768px) {
       font-size: 1.5rem;
     }
   }
@@ -68,7 +67,7 @@ export const ContentAbout = styled.div`
     font-size: 10rem;
     color: rgba(55, 55, 55, 0.4);
     animation-name: animateBackground;
-    animation-duration: 120s;
+    animation-duration: 90s;
     animation-iteration-count: infinite;
 
     @keyframes animateBackground {
