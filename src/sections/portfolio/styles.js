@@ -92,7 +92,7 @@ export const ContentPortfolio = styled.div`
     }
 
     @media (min-width: 976px) {
-      font-size: 20rem;
+      font-size: 16rem;
     }
   }
 `;
