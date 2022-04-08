@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import { RiMapPin2Line, RiMailOpenLine } from "react-icons/ri";
 import { FiSmartphone } from "react-icons/fi";
 
@@ -8,14 +9,18 @@ import {
   ContentContacts,
 } from "./styles";
 
+import { TitleComponent } from "../../components";
+
 const Contact = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
   return (
     <WrapperContact id="contacts">
-      <h1>
-        ENTRE <span>EM CONTATO</span>
-      </h1>
-      <ContentContact>
-        <ContentThanks>
+      <TitleComponent title="ENTRE" titleSpan="EM CONTATO" />
+      <ContentContact ref={ref}>
+        <ContentThanks className={inView ? "animation" : ""}>
           <p>
             Me esforço para ser criativo, busco criar a melhor comunicação com a
             minha equipe. Muito bem, sei que acabamos de nos conhecer, mas já
@@ -27,7 +32,7 @@ const Contact = () => {
             por conta da casa!
           </small>
         </ContentThanks>
-        <ContentContacts>
+        <ContentContacts className={inView ? "animation" : ""}>
           <h4>Retornarei o contato em até 24 horas.</h4>
           <p>
             <em>Contact us and we'll get back to you within 24 hours.</em>

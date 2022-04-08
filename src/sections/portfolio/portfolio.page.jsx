@@ -1,3 +1,5 @@
+import { useInView } from "react-intersection-observer";
+
 import { WrapperPortfolio, ContentPortfolio, ContentImage } from "./styles";
 
 import logoBatalhaDev from "../../assets/images/bdev-example.png";
@@ -7,7 +9,13 @@ import virta from "../../assets/images/virta-example.png";
 import logoGdat from "../../assets/images/gdat-all.png";
 import logoDryve from "../../assets/images/dryve-example.png";
 
+import { TitleComponent } from "../../components";
+
 export default function Portfolio() {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
   const portfolios = [
     {
       logo: logoBatalhaDev,
@@ -60,12 +68,10 @@ export default function Portfolio() {
 
   return (
     <WrapperPortfolio id="portfolio">
-      <h1>
-        MEU <span>PORTFÓLIO</span>
-      </h1>
-      <ContentPortfolio>
+      <TitleComponent title="MEU" titleSpan="PORTFÓLIO" />
+      <ContentPortfolio ref={ref}>
         {portfolios.map((item, idx) => (
-          <div key={idx}>
+          <div key={idx} className={inView ? "animation" : ""}>
             <ContentImage>
               <a href={item.url} target="_blank" rel="noreferrer">
                 <img
@@ -78,7 +84,12 @@ export default function Portfolio() {
             <div>
               <h4>{item.title}</h4>
               <p>{item.description}</p>
-              <a className="link-page" href={item.url} target="_blank" rel="noreferrer">
+              <a
+                className="link-page"
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {item.link}
               </a>
             </div>

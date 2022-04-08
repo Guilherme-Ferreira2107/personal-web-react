@@ -7,21 +7,6 @@ export const WrapperAbout = styled.section`
   @media (min-width: 768px) {
     padding: 80px 100px;
   }
-
-  h1 {
-    font-family: "Barlow Condensed", sans-serif;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-weight: 500;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 40px;
-
-    span {
-      font-family: "Barlow Condensed", sans-serif;
-      color: #0093e9;
-    }
-  }
 `;
 
 export const ContentAbout = styled.div`
@@ -30,14 +15,33 @@ export const ContentAbout = styled.div`
   color: white;
   margin: auto;
   max-width: 900px;
+  transition: all 0.5s linear;
 
   & div {
     width: 100%;
+    position: relative;
+    margin-bottom: 0px;
+    transition: all 1s linear;
+
+    .animation {
+      animation-name: animateAboutText;
+      animation-duration: 4s;
+      animation-iteration-count: linear;
+
+      @keyframes animateAboutText {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   p,
   span {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 300;
     position: relative;
     z-index: 2;
@@ -66,19 +70,20 @@ export const ContentAbout = styled.div`
     font-weight: 500;
     font-size: 10rem;
     color: rgba(55, 55, 55, 0.4);
-    animation-name: animateBackground;
+
+    animation-name: animateBackgroundOne;
     animation-duration: 90s;
     animation-iteration-count: infinite;
 
-    @keyframes animateBackground {
+    @keyframes animateBackgroundOne {
       0% {
-        left: 0px;
+        left: -600px;
       }
       50% {
-        left: -200px;
+        left: 0px;
       }
       100% {
-        left: 0px;
+        left: -600px;
       }
     }
 

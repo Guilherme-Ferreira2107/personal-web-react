@@ -27,6 +27,22 @@ export const ContentPresentation = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    &.animation {
+      animation-name: animationSubTitle;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+
+      @keyframes animationSubTitle {
+        0% {
+          opacity: 0;
+          margin-top: -150px;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   p {
@@ -52,12 +68,11 @@ export const ContentPresentation = styled.div`
   }
 
   span {
-    font-family: "Barlow Condensed", sans-serif;
     color: white;
     font-weight: 300;
-    margin-top: 4px;
-    margin-right: 10px;
+    margin: 4px 10px 0 10px;
     position: relative;
+    font-size: 0.75rem;
 
     &:before {
       content: "";
@@ -70,8 +85,6 @@ export const ContentPresentation = styled.div`
       height: 1px;
       background-color: rgba(255, 255, 255, 0.5);
     }
-
-    font-size: 0.75rem;
 
     @media (min-width: 465px) {
       font-size: 1rem;
@@ -89,6 +102,22 @@ export const ContentArrow = styled.div`
   right: 0;
   bottom: 0;
   margin: 0 20px 20px 0;
+
+  .animation {
+    animation-name: animationArrow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+
+    @keyframes animationArrow {
+      0% {
+        opacity: 0;
+        margin-bottom: 140px;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 
   svg {
     font-size: 3rem;

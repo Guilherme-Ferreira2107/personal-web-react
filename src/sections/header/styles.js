@@ -137,7 +137,7 @@ export const NavbarCollapseMobile = styled.div`
   z-index: 7;
   background-color: rgba(55, 55, 55, 1);
   border-radius: 0.25rem;
-  padding: 20px;
+  padding: 10px 20px;
   animation-name: showMenu;
   animation-duration: 0.15s;
 
@@ -160,6 +160,11 @@ export const NavbarCollapseMobile = styled.div`
 
   li {
     padding: 12px 4px;
+
+    &:first-child {
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
 
     a {
       color: white;

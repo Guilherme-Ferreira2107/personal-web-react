@@ -7,19 +7,6 @@ export const WrapperPortfolio = styled.section`
   @media (min-width: 768px) {
     padding: 80px 100px;
   }
-
-  h1 {
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-weight: 500;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 40px;
-
-    span {
-      color: #0093e9;
-    }
-  }
 `;
 
 export const ContentPortfolio = styled.div`
@@ -33,6 +20,22 @@ export const ContentPortfolio = styled.div`
   & > div {
     margin: 20px auto;
     padding: 10px;
+    transition: all 1s linear;
+
+    &.animation {
+      animation-name: animatePortfolio;
+      animation-duration: 3s;
+      animation-iteration-count: linear;
+
+      @keyframes animatePortfolio {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
 
     @media (min-width: 465px) {
       width: calc(100% / 2);
@@ -80,7 +83,6 @@ export const ContentPortfolio = styled.div`
     left: 0;
     top: 0;
     margin: 100% 0 0 -20%;
-    font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
     font-size: 4rem;
     color: rgba(255, 255, 255, 0.1);
@@ -93,7 +95,7 @@ export const ContentPortfolio = styled.div`
         left: 0px;
       }
       50% {
-        left: -200px;
+        left: -600px;
       }
       100% {
         left: 0px;
@@ -117,23 +119,22 @@ export const ContentPortfolio = styled.div`
     left: 0;
     bottom: 0;
     margin: -50% 0 0 -20%;
-    font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
     font-size: 4rem;
     color: rgba(255, 255, 255, 0.1);
-    animation-name: animateBackground;
+    animation-name: animateBackgroundTwo;
     animation-duration: 90s;
     animation-iteration-count: infinite;
 
-    @keyframes animateBackground {
+    @keyframes animateBackgroundTwo {
       0% {
-        left: -200px;
+        left: -600px;
       }
       50% {
         left: 0px;
       }
       100% {
-        left: -200px;
+        left: -600px;
       }
     }
 
@@ -155,11 +156,6 @@ export const ContentImage = styled.div`
   overflow: hidden;
   object-fit: cover;
   transition: all 0.25s linear;
-  filter: grayscale(1);
-
-  &:hover {
-    filter: grayscale(0);
-  }
 
   img {
     width: 100%;

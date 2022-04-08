@@ -1,4 +1,9 @@
+import { useInView } from "react-intersection-observer";
+
 import perfil from "../../assets/images/perfil_1.png";
+
+import { TitleComponent } from "../../components";
+
 import {
   WrapperAbout,
   ContentAbout,
@@ -7,17 +12,19 @@ import {
 } from "./styles";
 
 const About = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
   return (
     <WrapperAbout id="about">
-      <h1>
-        SOBRE <span>MIM</span>
-      </h1>
+      <TitleComponent title="SOBRE" titleSpan="MIM" />
       <ContentImageMobile>
         <img src={perfil} alt="Guilherme Santos" />
       </ContentImageMobile>
-      <ContentAbout>
+      <ContentAbout ref={ref}>
         <div>
-          <p>
+          <p className={inView ? "animation" : ""}>
             Olá, prazer em conhecer você!
             <br />
             <br />
@@ -45,6 +52,6 @@ const About = () => {
       </ContentAbout>
     </WrapperAbout>
   );
-}
+};
 
 export default About;

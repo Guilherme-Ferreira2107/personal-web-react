@@ -3,24 +3,10 @@ import styled from "styled-components";
 export const WrapperContact = styled.section`
   width: 100%;
   padding: 80px 20px;
+  transition: all 0.25s linear;
 
   @media (min-width: 768px) {
     padding: 80px 100px;
-  }
-
-  h1 {
-    font-family: "Barlow Condensed", sans-serif;
-    text-align: center;
-    letter-spacing: 0.2rem;
-    font-weight: 500;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 40px;
-
-    span {
-      font-family: "Barlow Condensed", sans-serif;
-      color: #0093e9;
-    }
   }
 `;
 
@@ -30,6 +16,7 @@ export const ContentContact = styled.div`
   flex-direction: column;
   position: relative;
   color: white;
+  transition: all 0.25s linear;
 
   @media (min-width: 465px) {
     max-width: 900px;
@@ -39,11 +26,26 @@ export const ContentContact = styled.div`
 
   & div {
     width: 100%;
+    transition: all 1s linear;
+
+    &.animation {
+      animation-name: animateContact;
+      animation-duration: 3s;
+      animation-iteration-count: linear;
+
+      @keyframes animateContact {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   p,
   span {
-    font-family: "Barlow Condensed", sans-serif;
     font-size: 1rem;
     font-weight: 300;
     position: relative;
