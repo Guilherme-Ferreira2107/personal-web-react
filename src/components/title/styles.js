@@ -20,16 +20,14 @@ export const WrapperTitle = styled.div`
       animation-name: animationTitle;
       animation-duration: 0.75s;
       animation-timing-function: linear;
+
       @keyframes animationTitle {
         0% {
-          display: none;
           opacity: 0;
           bottom: -20px;
         }
         100% {
-          display: initial;
           opacity: 1;
-          bottom: 0px;
         }
       }
     }
