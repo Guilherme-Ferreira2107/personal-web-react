@@ -96,7 +96,7 @@ export const NavbarMobile = styled.nav`
   position: absolute;
   right: 0;
   top: 0;
-  padding: 20px;
+  padding: 20px 20px 0 0;
   transition: all 0.25s linear;
   z-index: 6;
 
@@ -104,12 +104,16 @@ export const NavbarMobile = styled.nav`
     transition: all 0.25s linear;
     border: none;
     color: rgba(255, 255, 255, 0.5);
-    background-color: transparent;
-    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px;
     border-radius: 0.25rem;
     cursor: pointer;
     animation-name: showButton;
     animation-duration: 0.15s;
+
+    :hover {
+      background-color: rgba(0, 0, 0, 0.75);
+    }
 
     svg {
       transition: all 0.25s linear;
