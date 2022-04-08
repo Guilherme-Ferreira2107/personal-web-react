@@ -26,6 +26,8 @@ export const ContentContact = styled.div`
 
   & div {
     width: 100%;
+    position: relative;
+    z-index: 2;
     transition: all 1s linear;
 
     &.animation {
@@ -62,6 +64,43 @@ export const ContentContact = styled.div`
 
   span {
     color: #0093e9;
+  }
+
+  &:before {
+    content: "CONTATO";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    margin: -5% 0 0 -20%;
+    font-weight: 500;
+    font-size: 10rem;
+    color: rgba(55, 55, 55, 0.4);
+
+    animation-name: animateBackgroundOne;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+
+    @keyframes animateBackgroundOne {
+      0% {
+        left: 0px;
+      }
+      50% {
+        left: -600px;
+      }
+      100% {
+        left: 0px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      font-size: 18rem;
+      margin: -5% 0 0 -5%;
+    }
+
+    @media (min-width: 976px) {
+      font-size: 20rem;
+    }
   }
 `;
 

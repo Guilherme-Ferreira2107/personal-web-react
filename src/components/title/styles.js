@@ -17,8 +17,9 @@ export const WrapperTitle = styled.div`
     transition: all 0.75s linear;
 
     &.animation {
+      bottom: 0;
       animation-name: animationTitle;
-      animation-duration: 0.75s;
+      animation-duration: 1s;
       animation-timing-function: linear;
 
       @keyframes animationTitle {
