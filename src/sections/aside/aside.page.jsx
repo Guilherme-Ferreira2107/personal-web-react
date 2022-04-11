@@ -35,8 +35,7 @@ const Aside = () => {
                 className="icon-social-media"
                 src={iconLinkedin}
                 alt="Linkedin"
-                height="30"
-                width="30"
+                loading="lazy"
               />
             </a>
           </li>
@@ -50,8 +49,7 @@ const Aside = () => {
                 className="icon-social-media"
                 src={iconWhatsapp}
                 alt="Whatsapp"
-                height="30"
-                width="30"
+                loading="lazy"
               />
             </a>
           </li>
@@ -65,8 +63,7 @@ const Aside = () => {
                 className="icon-social-media"
                 src={iconGithub}
                 alt="Github"
-                height="30"
-                width="30"
+                loading="lazy"
               />
             </a>
           </li>
@@ -74,6 +71,6 @@ const Aside = () => {
       </ContentSocialMedia>
     </WrapperAside>
   );
-}
+};
 
 export default Aside;

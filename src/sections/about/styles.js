@@ -108,8 +108,12 @@ export const ContentImage = styled.div`
   }
 
   img {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 100%;
+    max-width: 140px;
+    max-height: 140px;
+    min-height: 140px;
+    min-width: 140px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
@@ -128,8 +132,12 @@ export const ContentImageMobile = styled.div`
   margin-bottom: 40px;
 
   img {
-    width: 140px !important;
-    height: 140px !important;
+    width: 100%;
+    height: 100%;
+    max-width: 140px;
+    max-height: 140px;
+    min-height: 140px;
+    min-width: 140px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;

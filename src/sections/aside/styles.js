@@ -69,5 +69,12 @@ export const SocialList = styled.ul`
         filter: grayscale(0);
       }
     }
+
+    a img {
+      width: 100%;
+      height: 100%;
+      max-width: 30px;
+      max-height: 30px;
+    }
   }
 `;

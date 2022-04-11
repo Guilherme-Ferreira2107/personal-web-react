@@ -1,3 +1,4 @@
+import loadable from "@loadable/component";
 import { useInView } from "react-intersection-observer";
 import { RiMapPin2Line, RiMailOpenLine } from "react-icons/ri";
 import { FiSmartphone } from "react-icons/fi";
@@ -9,7 +10,9 @@ import {
   ContentContacts,
 } from "./styles";
 
-import { TitleComponent } from "../../components";
+const TitleComponent = loadable(() =>
+  import("../../components/title/title.components")
+);
 
 const Contact = () => {
   const { ref, inView } = useInView({

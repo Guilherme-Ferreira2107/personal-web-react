@@ -1,8 +1,8 @@
+import loadable from "@loadable/component";
+
 import { useInView } from "react-intersection-observer";
 
 import perfil from "../../assets/images/perfil_1.png";
-
-import { TitleComponent } from "../../components";
 
 import {
   WrapperAbout,
@@ -10,6 +10,10 @@ import {
   ContentImage,
   ContentImageMobile,
 } from "./styles";
+
+const TitleComponent = loadable(() =>
+  import("../../components/title/title.components")
+);
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -20,7 +24,7 @@ const About = () => {
     <WrapperAbout id="about">
       <TitleComponent title="SOBRE" titleSpan="MIM" />
       <ContentImageMobile>
-        <img src={perfil} alt="Guilherme Santos" />
+        <img src={perfil} alt="Guilherme Santos" loading="lazy" />
       </ContentImageMobile>
       <ContentAbout ref={ref}>
         <div>
@@ -47,7 +51,7 @@ const About = () => {
           </p>
         </div>
         <ContentImage>
-          <img src={perfil} alt="Guilherme Santos" />
+          <img src={perfil} alt="Guilherme Santos" loading="lazy" />
         </ContentImage>
       </ContentAbout>
     </WrapperAbout>

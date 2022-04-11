@@ -108,7 +108,7 @@ export const NavbarMobile = styled.nav`
     padding: 8px;
     border-radius: 0.25rem;
     cursor: pointer;
-    animation-name: showButton;
+    /* animation-name: showButton; */
     animation-duration: 0.15s;
 
     :hover {
@@ -142,7 +142,7 @@ export const NavbarCollapseMobile = styled.div`
   background-color: rgba(55, 55, 55, 1);
   border-radius: 0.25rem;
   padding: 10px 20px;
-  animation-name: showMenu;
+  /* animation-name: showMenu; */
   animation-duration: 0.15s;
 
   @keyframes showMenu {

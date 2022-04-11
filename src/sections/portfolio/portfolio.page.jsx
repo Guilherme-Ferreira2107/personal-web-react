@@ -1,3 +1,4 @@
+import loadable from "@loadable/component";
 import { useInView } from "react-intersection-observer";
 
 import { WrapperPortfolio, ContentPortfolio, ContentImage } from "./styles";
@@ -9,7 +10,9 @@ import virta from "../../assets/images/virta-example.png";
 import logoGdat from "../../assets/images/gdat-all.png";
 import logoDryve from "../../assets/images/dryve-example.png";
 
-import { TitleComponent } from "../../components";
+const TitleComponent = loadable(() =>
+  import("../../components/title/title.components")
+);
 
 export default function Portfolio() {
   const { ref, inView } = useInView({
@@ -78,6 +81,7 @@ export default function Portfolio() {
                   src={item.logo}
                   alt={item.title}
                   aria-labelledby={item.title}
+                  loading="lazy"
                 />
               </a>
             </ContentImage>

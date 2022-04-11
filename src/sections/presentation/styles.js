@@ -70,29 +70,11 @@ export const ContentPresentation = styled.div`
   span {
     color: white;
     font-weight: 300;
-    margin: 4px 10px 0 10px;
     position: relative;
     font-size: 0.75rem;
 
-    &:before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      margin-right: 150px;
-      margin-bottom: 6px;
-      width: 30px;
-      height: 1px;
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-
     @media (min-width: 465px) {
       font-size: 1rem;
-
-      &:before {
-        margin-right: 200px;
-        margin-bottom: 8px;
-      }
     }
   }
 `;

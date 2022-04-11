@@ -75,7 +75,7 @@ export default function Header() {
             </ul>
           </NavbarCollapseMobile>
         ) : (
-          <button onClick={() => setToogleMenu(!toogleMenu)}>
+          <button aria-label="Menu" onClick={() => setToogleMenu(!toogleMenu)}>
             <AiOutlineMenu />
           </button>
         )}
