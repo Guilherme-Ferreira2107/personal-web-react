@@ -40,7 +40,7 @@ export default function Presentation() {
       <ContentPresentation ref={ref}>
         <div className={inView ? "animation" : ""}>
           <p>GUILHERME SANTOS</p>
-          <span class="ml12">CARINHO POR CADA LINHA DE CÓDIGO</span>
+          <span className="ml12">CARINHO POR CADA LINHA DE CÓDIGO</span>
         </div>
         <ContentArrow>
           <BsArrowDown className={inView ? "animation" : ""} />

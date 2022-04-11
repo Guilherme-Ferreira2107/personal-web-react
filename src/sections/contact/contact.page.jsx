@@ -25,14 +25,15 @@ const Contact = () => {
       <ContentContact ref={ref}>
         <ContentThanks className={inView ? "animation" : ""}>
           <p>
-            Me esforço para ser criativo, busco criar a melhor comunicação com a
-            minha equipe. Muito bem, sei que acabamos de nos conhecer, mas já
-            tenho um bom pressentimento.
+            Me esforço para ser criativo e busco criar a melhor comunicação com
+            a minha equipe. <br />
+            Uau, sei que acabamos de nos conhecer, mas já tenho um bom
+            pressentimento.
           </p>
           <small>
             Obrigado pela visita, e para me conhecer melhor, por favor, entre em
-            contato. Ou melhor ainda, vamos marcar para tomar um café virtual. É
-            por conta da casa!
+            contato comigo. Ou melhor ainda, vamos marcar para tomar um café
+            virtual. <br />É por conta da casa!
           </small>
         </ContentThanks>
         <ContentContacts className={inView ? "animation" : ""}>

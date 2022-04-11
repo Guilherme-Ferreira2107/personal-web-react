@@ -1,7 +1,7 @@
 import loadable from "@loadable/component";
 import { useInView } from "react-intersection-observer";
 
-import { WrapperPortfolio, ContentPortfolio, ContentImage } from "./styles";
+import { WrapperPortfolio, ContentPortfolio } from "./styles";
 
 import logoBatalhaDev from "../../assets/images/bdev-example.png";
 import logoHelppy from "../../assets/images/hellpy-example.png";
@@ -72,7 +72,15 @@ export default function Portfolio() {
       <TitleComponent title="MEU" titleSpan="PORTFÓLIO" />
       <ContentPortfolio ref={ref}>
         {portfolios.map((item, idx) => (
-          <div key={idx} className={inView ? "animation" : ""}>
+          <div
+            key={idx}
+            className={`
+            ${inView ? `animation` : ""}
+            ${inView ? `animation-${idx}` : ""}
+            ${idx === 0 ? "single-one-line" : ""}
+            ${idx === 3 ? "single-one-line" : ""}
+            `}
+          >
             <a href={item.url} target="_blank" rel="noreferrer">
               <img
                 src={item.logo}
@@ -83,14 +91,7 @@ export default function Portfolio() {
               <div>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
-                <a
-                  className="link-page"
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {item.link}
-                </a>
+                <span className="link-page">{item.link}</span>
               </div>
             </a>
           </div>

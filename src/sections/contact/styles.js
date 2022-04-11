@@ -75,7 +75,7 @@ export const ContentContact = styled.div`
     top: 0;
     margin: -5% 0 0 -20%;
     font-weight: 500;
-    font-size: 10rem;
+    font-size: 8rem;
     color: ${paletas.Grafite};
 
     animation-name: animateBackgroundOne;
@@ -95,7 +95,7 @@ export const ContentContact = styled.div`
     }
 
     @media (min-width: 768px) {
-      font-size: 18rem;
+      font-size: 14rem;
       margin: -5% 0 0 -5%;
     }
 

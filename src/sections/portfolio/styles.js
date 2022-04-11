@@ -16,7 +16,7 @@ export const ContentPortfolio = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: auto;
-  max-width: 1100px;
+  max-width: 900px;
 
   & > div {
     position: relative;
@@ -26,7 +26,8 @@ export const ContentPortfolio = styled.div`
     text-align: center;
     object-fit: cover;
     overflow: hidden;
-    background: ${paletas.Black};
+    margin: 8px;
+    background: ${paletas.White20};
 
     &:hover {
       transition: all 0.15s linear;
@@ -37,7 +38,7 @@ export const ContentPortfolio = styled.div`
       }
 
       img {
-        transform: scale(1.1);
+        transform: scale(1.05);
         filter: grayscale(0) brightness(0.25) blur(0px);
       }
 
@@ -49,21 +50,32 @@ export const ContentPortfolio = styled.div`
 
     &.animation {
       animation-name: animatePortfolio;
-      animation-duration: 3s;
+      animation-duration: 2s;
       animation-iteration-count: linear;
 
       @keyframes animatePortfolio {
         0% {
           opacity: 0;
+          margin-bottom: 80px;
         }
         100% {
           opacity: 1;
+          margin-bottom: 8px;
         }
       }
     }
 
+    &.single-one-line {
+      width: 100%;
+      max-width: 100%;
+    }
+
     @media (min-width: 465px) {
-      width: calc(100% / 2);
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      width: calc((100% - 40px) / 2);
     }
 
     h4 {
@@ -91,7 +103,7 @@ export const ContentPortfolio = styled.div`
       width: 100%;
       z-index: -1;
       transition: all 0.25s linear;
-      filter: grayscale(1) brightness(0.05) blur(2px);
+      filter: grayscale(1) brightness(0.2) blur(2px);
     }
 
     .link-page {
@@ -176,28 +188,6 @@ export const ContentPortfolio = styled.div`
 
     @media (min-width: 976px) {
       font-size: 16rem;
-    }
-  }
-`;
-
-export const ContentImage = styled.div`
-  position: relative;
-  z-index: 2;
-  min-height: 200px;
-  overflow: hidden;
-  object-fit: cover;
-  transition: all 0.15s linear;
-
-  img {
-    width: 100%;
-    transition: all 0.15s linear;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    @media (min-width: 768px) {
-      max-height: initial;
     }
   }
 `;

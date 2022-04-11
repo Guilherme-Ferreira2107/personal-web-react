@@ -97,11 +97,11 @@ export const NavbarMobile = styled.nav`
   position: absolute;
   right: 0;
   top: 0;
-  padding: 20px 20px 0 0;
   transition: all 0.25s linear;
   z-index: 6;
 
   button {
+    margin: 20px 20px 0 0;
     transition: all 0.25s linear;
     border: none;
     color: ${paletas.White50};
@@ -110,7 +110,7 @@ export const NavbarMobile = styled.nav`
     border-radius: 0.25rem;
     cursor: pointer;
 
-    :hover {
+    &:hover {
       background-color: ${paletas.Grafite};
     }
 
@@ -129,9 +129,26 @@ export const NavbarMobile = styled.nav`
 export const NavbarCollapseMobile = styled.div`
   position: relative;
   z-index: 7;
-  background-color: ${paletas.Grafite};
+  background-color: ${paletas.GrafiteDark};
   border-radius: 0.25rem;
   padding: 10px 20px;
+  width: 100vw;
+  height: 100vh;
+
+  animation-name: animateAboutText;
+  animation-duration: 0.25s;
+  animation-iteration-count: linear;
+
+  @keyframes animateAboutText {
+    0% {
+      width: 0vw;
+      height: 0vh;
+    }
+    100% {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
 
   ul {
     list-style: none;
