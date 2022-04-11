@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { paletas } from "../../styled/theme";
 
 export const WrapperAside = styled.aside`
   position: relative;
   width: 100px;
   height: 100vh;
   min-height: 600px;
-  background-color: #2b2b2b;
+  background-color: ${paletas.GrafiteDark};
 
   display: flex;
   justify-content: space-between;
@@ -20,7 +21,7 @@ export const ContentNamePanel = styled.div`
     transform: rotate(-90deg);
 
     p {
-      color: rgba(255, 255, 255, 0.5);
+      color: ${paletas.White50};
       font-size: 1.4rem;
       letter-spacing: 0.15rem;
     }
@@ -50,7 +51,7 @@ export const VerticalDivisor = styled.div`
     left: 50%;
     height: 30px;
     width: 1px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: ${paletas.White50};
   }
 `;
 

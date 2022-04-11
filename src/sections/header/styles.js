@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { paletas } from "../../styled/theme";
 
 export const WrapperHeader = styled.section`
   width: 100%;
@@ -12,7 +13,7 @@ export const WrapperHeader = styled.section`
     z-index: 5;
 
     @media (min-width: 768px) {
-      background-color: rgba(50, 50, 50, 0.95);
+      background-color: ${paletas.Grafite};
       box-shadow: 0 0 35px rgb(0 0 0 / 10%);
 
       animation-name: showHeader;
@@ -53,7 +54,7 @@ export const NavbarHeader = styled.div`
 
   &.scroll-active {
     opacity: 1;
-    color: rgba(255, 255, 255, 0.5);
+    color: ${paletas.White50};
   }
 `;
 
@@ -64,11 +65,11 @@ export const NavbarCollapse = styled.div`
   &.scroll-active {
     transition: all 0.25s linear;
     a {
-      color: rgba(255, 255, 255, 0.5);
+      color: ${paletas.White50};
       transition: all 0.25s linear;
 
       &:hover {
-        color: rgba(255, 255, 255, 1);
+        color: ${paletas.White};
       }
     }
   }
@@ -82,11 +83,11 @@ export const NavbarCollapse = styled.div`
     margin: 4px 16px;
 
     a {
-      color: rgba(255, 255, 255, 0.5);
+      color: ${paletas.White50};
       transition: all 0.25s linear;
 
       &:hover {
-        color: rgba(255, 255, 255, 1);
+        color: ${paletas.White};
       }
     }
   }
@@ -103,30 +104,19 @@ export const NavbarMobile = styled.nav`
   button {
     transition: all 0.25s linear;
     border: none;
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, 0.2);
+    color: ${paletas.White50};
+    background-color: ${paletas.Black};
     padding: 8px;
     border-radius: 0.25rem;
     cursor: pointer;
-    /* animation-name: showButton; */
-    animation-duration: 0.15s;
 
     :hover {
-      background-color: rgba(0, 0, 0, 0.75);
+      background-color: ${paletas.Grafite};
     }
 
     svg {
       transition: all 0.25s linear;
       font-size: 20px;
-    }
-
-    @keyframes showButton {
-      from {
-        transform: scale(0);
-      }
-      to {
-        transform: scale(1);
-      }
     }
   }
 
@@ -139,24 +129,9 @@ export const NavbarMobile = styled.nav`
 export const NavbarCollapseMobile = styled.div`
   position: relative;
   z-index: 7;
-  background-color: rgba(55, 55, 55, 1);
+  background-color: ${paletas.Grafite};
   border-radius: 0.25rem;
   padding: 10px 20px;
-  /* animation-name: showMenu; */
-  animation-duration: 0.15s;
-
-  @keyframes showMenu {
-    from {
-      margin-top: -100px;
-      margin-right: -50px;
-      transform: scale3d(0.3, 0.3, 0.3);
-    }
-    to {
-      margin-top: 0px;
-      margin-right: 0px;
-      transform: scale3d(1, 1, 1);
-    }
-  }
 
   ul {
     list-style: none;
@@ -167,11 +142,11 @@ export const NavbarCollapseMobile = styled.div`
 
     &:first-child {
       margin-bottom: 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid ${paletas.White50};
     }
 
     a {
-      color: white;
+      color: ${paletas.White};
     }
   }
 `;

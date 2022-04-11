@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { paletas } from "../../styled/theme";
 
 export const WrapperAbout = styled.section`
   width: 100%;
@@ -56,7 +57,7 @@ export const ContentAbout = styled.div`
   }
 
   span {
-    color: #0093e9;
+    color: ${paletas.BlueLight};
   }
 
   &:before {
@@ -66,10 +67,9 @@ export const ContentAbout = styled.div`
     left: 0;
     top: 0;
     margin: -5% 0 0 -20%;
-    font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
     font-size: 10rem;
-    color: rgba(55, 55, 55, 0.4);
+    color: ${paletas.Grafite};
 
     animation-name: animateBackgroundOne;
     animation-duration: 90s;
@@ -110,10 +110,10 @@ export const ContentImage = styled.div`
   img {
     width: 100%;
     height: 100%;
-    max-width: 140px;
-    max-height: 140px;
-    min-height: 140px;
-    min-width: 140px;
+    max-width: 300px;
+    max-height: 300px;
+    min-height: 300px;
+    min-width: 300px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;

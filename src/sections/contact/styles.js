@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { paletas } from "../../styled/theme";
 
 export const WrapperContact = styled.section`
   width: 100%;
@@ -63,7 +64,7 @@ export const ContentContact = styled.div`
   }
 
   span {
-    color: #0093e9;
+    color: ${paletas.BlueLight};
   }
 
   &:before {
@@ -75,7 +76,7 @@ export const ContentContact = styled.div`
     margin: -5% 0 0 -20%;
     font-weight: 500;
     font-size: 10rem;
-    color: rgba(55, 55, 55, 0.4);
+    color: ${paletas.Grafite};
 
     animation-name: animateBackgroundOne;
     animation-duration: 120s;
@@ -142,6 +143,6 @@ export const ContentContacts = styled.div`
   a:hover {
     transition: all 0.25s linear;
 
-    color: #0093e9;
+    color: ${paletas.BlueLight};
   }
 `;

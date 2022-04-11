@@ -17,8 +17,7 @@ export default function Presentation() {
   });
 
   useEffect(() => {
-    // Wrap every letter in a span
-    var textWrapper = document.querySelector(".ml12");
+    const textWrapper = document.querySelector(".ml12");
     textWrapper.innerHTML = textWrapper.textContent.replace(
       /\S/g,
       "<span class='letter'>$&</span>"

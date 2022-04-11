@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { paletas } from "../../styled/theme";
 
 export const WrapperPresentation = styled.section`
   width: 100%;
@@ -14,12 +15,12 @@ export const ContentPresentation = styled.div`
   justify-content: center;
   align-items: center;
   text-align: right;
-  background-color: #0093e9;
+  background-color: ${paletas.BlueLight};
   background-image: linear-gradient(
     160deg,
-    #0093e9 0%,
-    #1560bd 50%,
-    #041e42 100%
+    ${paletas.BlueLight} 0%,
+    ${paletas.BlueLight50} 50%,
+    ${paletas.BlueDark} 100%
   );
 
   & div {
@@ -47,10 +48,9 @@ export const ContentPresentation = styled.div`
 
   p {
     position: relative;
-    font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
     font-size: 3rem;
-    color: #07398050;
+    color: ${paletas.BlueDark50};
     letter-spacing: 0.4rem;
     line-height: 2.5rem;
 
@@ -68,7 +68,7 @@ export const ContentPresentation = styled.div`
   }
 
   span {
-    color: white;
+    color: ${paletas.White50};
     font-weight: 300;
     position: relative;
     font-size: 0.75rem;
@@ -103,6 +103,6 @@ export const ContentArrow = styled.div`
 
   svg {
     font-size: 3rem;
-    color: rgba(255, 255, 255, 0.2);
+    color: ${paletas.White20};
   }
 `;

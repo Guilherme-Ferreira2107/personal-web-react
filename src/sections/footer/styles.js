@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { paletas } from "../../styled/theme";
 
 export const WrapperFooter = styled.footer`
   width: 100%;
@@ -6,7 +7,7 @@ export const WrapperFooter = styled.footer`
   text-align: center;
 
   a {
-    color: #0093e9;
+    color: ${paletas.BlueLight};
     margin: 0 10px;
     text-decoration: underline;
     transition: all 0.2s linear;
@@ -18,7 +19,7 @@ export const WrapperFooter = styled.footer`
   }
 
   p {
-    color: rgba(255, 255, 255, 0.5);
+    color: ${paletas.White50};
     margin: 20px 0;
   }
 `;
