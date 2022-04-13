@@ -56,11 +56,9 @@ export const ContentPortfolio = styled.div`
       @keyframes animatePortfolio {
         0% {
           opacity: 0;
-          margin-bottom: 80px;
         }
         100% {
           opacity: 1;
-          margin-bottom: 8px;
         }
       }
     }

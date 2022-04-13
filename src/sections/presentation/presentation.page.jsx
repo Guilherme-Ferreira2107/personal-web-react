@@ -38,6 +38,18 @@ export default function Presentation() {
     <WrapperPresentation>
       <Aside />
       <ContentPresentation ref={ref}>
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
         <div className={inView ? "animation" : ""}>
           <p>GUILHERME SANTOS</p>
           <span className="ml12">CARINHO POR CADA LINHA DE CÓDIGO</span>
