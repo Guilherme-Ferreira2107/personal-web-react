@@ -18,6 +18,10 @@ export const ContentPresentation = styled.div`
   transition: all 0.25s linear;
   background-color: ${paletas.BlueLight50};
 
+  .pr-12 {
+    margin-right: 12px;
+  }
+
   .circles {
     position: absolute;
     top: 0;

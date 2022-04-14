@@ -52,7 +52,7 @@ export default function Presentation() {
         </ul>
         <div className={inView ? "animation" : ""}>
           <p>GUILHERME SANTOS</p>
-          <span className="ml12">CARINHO POR CADA LINHA DE CÓDIGO</span>
+          <span className="ml12 pr-12">CARINHO POR CADA LINHA DE CÓDIGO</span>
         </div>
         <ContentArrow>
           <BsArrowDown className={inView ? "animation" : ""} />
