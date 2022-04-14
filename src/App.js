@@ -19,7 +19,7 @@ const Loading = loadable(() =>
 
 function App() {
   const renderLoader = () => <Loading />;
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => setTheme(isDarkTheme ? "light" : "dark");
 
