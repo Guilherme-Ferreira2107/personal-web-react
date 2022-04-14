@@ -29,6 +29,11 @@ export default function Header({ toggleTheme, isDarkTheme }) {
     setClassScroll(offset > 0 ? "scroll-active" : "");
   }, [offset]);
 
+  const applyChanges = () => {
+    toggleTheme();
+    setToogleMenu(false);
+  };
+
   return (
     <WrapperHeader className={classScroll}>
       <NavbarDesktop>
@@ -99,7 +104,7 @@ export default function Header({ toggleTheme, isDarkTheme }) {
                 </a>
               </li>
               <li>
-                <button onClick={toggleTheme}>
+                <button onClick={applyChanges}>
                   TEMA: {isDarkTheme ? "DARK" : "LIGHT"}
                 </button>
               </li>
