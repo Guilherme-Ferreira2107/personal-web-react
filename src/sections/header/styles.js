@@ -10,7 +10,7 @@ export const WrapperHeader = styled.section`
   z-index: 99;
 
   &.scroll-active {
-    z-index: 5;
+    z-index: 99;
 
     @media (min-width: 768px) {
       background-color: ${paletas.Grafite};
@@ -55,6 +55,7 @@ export const NavbarCollapse = styled.div`
 
   &.scroll-active {
     transition: all 0.25s linear;
+
     a {
       color: ${paletas.White50};
       transition: all 0.25s linear;
