@@ -9,7 +9,6 @@ export const WrapperTitle = styled.div`
   position: relative;
 
   h1 {
-    color: white;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.2rem;

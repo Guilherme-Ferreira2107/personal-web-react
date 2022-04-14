@@ -3,10 +3,10 @@ import { paletas } from "../../styled/theme";
 
 export const WrapperAside = styled.aside`
   position: relative;
+  z-index: 10;
   width: 100px;
   height: 100vh;
   min-height: 600px;
-  background-color: ${paletas.GrafiteDark};
 
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@ export const ContentNamePanel = styled.div`
     transform: rotate(-90deg);
 
     p {
-      color: ${paletas.White50};
+      /* color: ${paletas.White50}; */
       font-size: 1.4rem;
       letter-spacing: 0.15rem;
     }

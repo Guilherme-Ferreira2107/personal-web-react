@@ -13,7 +13,6 @@ export const WrapperAbout = styled.section`
 export const ContentAbout = styled.div`
   position: relative;
   display: flex;
-  color: white;
   margin: auto;
   max-width: 900px;
   transition: all 0.5s linear;
@@ -22,12 +21,9 @@ export const ContentAbout = styled.div`
     width: 100%;
     position: relative;
     margin-bottom: 0px;
-    transition: all 1s linear;
 
     .animation {
-      animation-name: animateAboutText;
-      animation-duration: 4s;
-      animation-iteration-count: linear;
+      animation: animateAboutText 1s linear;
 
       @keyframes animateAboutText {
         0% {
@@ -69,11 +65,9 @@ export const ContentAbout = styled.div`
     margin: -5% 0 0 -20%;
     font-weight: 500;
     font-size: 10rem;
-    color: ${paletas.Grafite};
-
-    animation-name: animateBackgroundOne;
-    animation-duration: 90s;
-    animation-iteration-count: infinite;
+    color: ${paletas.CinzaClaro};
+    transition: all 1s linear;
+    animation: animateBackgroundOne 90s infinite;
 
     @keyframes animateBackgroundOne {
       0% {

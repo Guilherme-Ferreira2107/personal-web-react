@@ -19,7 +19,6 @@ export const WrapperFooter = styled.footer`
   }
 
   p {
-    color: ${paletas.White50};
     margin: 20px 0;
   }
 `;

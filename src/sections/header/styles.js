@@ -7,7 +7,7 @@ export const WrapperHeader = styled.section`
   transition: all 0.25s linear;
   background-color: transparent;
   position: fixed;
-  z-index: 10;
+  z-index: 99;
 
   &.scroll-active {
     z-index: 5;
@@ -16,8 +16,7 @@ export const WrapperHeader = styled.section`
       background-color: ${paletas.Grafite};
       box-shadow: 0 0 35px rgb(0 0 0 / 10%);
 
-      animation-name: showHeader;
-      animation-duration: 0.25s;
+      animation: showHeader 0.25s;
     }
 
     @keyframes showHeader {
@@ -28,14 +27,6 @@ export const WrapperHeader = styled.section`
         top: 0px;
       }
     }
-  }
-
-  .openMenu {
-    display: block;
-  }
-
-  .closeMenu {
-    display: none;
   }
 `;
 
@@ -90,6 +81,12 @@ export const NavbarCollapse = styled.div`
         color: ${paletas.White};
       }
     }
+
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
   }
 `;
 
@@ -132,12 +129,10 @@ export const NavbarCollapseMobile = styled.div`
   background-color: ${paletas.GrafiteDark};
   border-radius: 0.25rem;
   padding: 10px 20px;
-  width: 100vw;
+  width: calc(100vw - 100px);
   height: 100vh;
 
-  animation-name: animateAboutText;
-  animation-duration: 0.25s;
-  animation-iteration-count: linear;
+  animation: animateAboutText 0.25s linear;
 
   @keyframes animateAboutText {
     0% {
@@ -145,7 +140,7 @@ export const NavbarCollapseMobile = styled.div`
       height: 0vh;
     }
     100% {
-      width: 100vw;
+      width: calc(100vw - 100px);
       height: 100vh;
     }
   }
@@ -164,6 +159,21 @@ export const NavbarCollapseMobile = styled.div`
 
     a {
       color: ${paletas.White};
+    }
+
+    button {
+      background: none;
+      border: 1px solid;
+    }
+  }
+
+  & .onClose {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+
+    button {
+      margin: 10px 0 0;
     }
   }
 `;

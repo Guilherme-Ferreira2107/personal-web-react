@@ -1,7 +1,9 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
+import { ThemeProvider } from "styled-components";
 import loadable from "@loadable/component";
 
 import { Wrapper } from "./styles";
+import { darkTheme, lightTheme, GlobalStyles } from "./styled/theme";
 
 const Header = lazy(() => import("./sections/header/header.page"));
 const Presentation = lazy(() =>
@@ -17,17 +19,23 @@ const Loading = loadable(() =>
 
 function App() {
   const renderLoader = () => <Loading />;
+  const [theme, setTheme] = useState("light");
+  const isDarkTheme = theme === "dark";
+  const toggleTheme = () => setTheme(isDarkTheme ? "light" : "dark");
 
   return (
     <Suspense fallback={renderLoader()}>
-      <Wrapper>
-        <Header />
-        <Presentation />
-        <About />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </Wrapper>
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+        <Wrapper>
+          <GlobalStyles />
+          <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+          <Presentation />
+          <About />
+          <Portfolio />
+          <Contact />
+          <Footer />
+        </Wrapper>
+      </ThemeProvider>
     </Suspense>
   );
 }

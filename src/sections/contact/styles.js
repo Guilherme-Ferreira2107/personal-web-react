@@ -16,7 +16,6 @@ export const ContentContact = styled.div`
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  color: white;
   transition: all 0.25s linear;
 
   @media (min-width: 465px) {
@@ -32,9 +31,7 @@ export const ContentContact = styled.div`
     transition: all 1s linear;
 
     &.animation {
-      animation-name: animateContact;
-      animation-duration: 3s;
-      animation-iteration-count: linear;
+      animation: animateContact 1s linear;
 
       @keyframes animateContact {
         0% {
@@ -76,11 +73,9 @@ export const ContentContact = styled.div`
     margin: -5% 0 0 -20%;
     font-weight: 500;
     font-size: 8rem;
-    color: ${paletas.Grafite};
+    color: ${paletas.CinzaClaro};
 
-    animation-name: animateBackgroundOne;
-    animation-duration: 120s;
-    animation-iteration-count: infinite;
+    animation: animateBackgroundOne 120s infinite;
 
     @keyframes animateBackgroundOne {
       0% {

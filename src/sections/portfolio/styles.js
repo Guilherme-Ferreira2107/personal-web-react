@@ -27,7 +27,7 @@ export const ContentPortfolio = styled.div`
     object-fit: cover;
     overflow: hidden;
     margin: 8px;
-    background: ${paletas.White20};
+    background: ${paletas.GrafiteDark};
 
     &:hover {
       transition: all 0.15s linear;
@@ -49,9 +49,7 @@ export const ContentPortfolio = styled.div`
     }
 
     &.animation {
-      animation-name: animatePortfolio;
-      animation-duration: 2s;
-      animation-iteration-count: linear;
+      animation: animatePortfolio 2s linear;
 
       @keyframes animatePortfolio {
         0% {
@@ -126,10 +124,8 @@ export const ContentPortfolio = styled.div`
     margin: 100% 0 0 -20%;
     font-weight: 500;
     font-size: 4rem;
-    color: ${paletas.Grafite};
-    animation-name: animateBackground;
-    animation-duration: 90s;
-    animation-iteration-count: infinite;
+    color: ${paletas.CinzaClaro};
+    animation: animateBackground 90s infinite;
 
     @keyframes animateBackground {
       0% {
@@ -162,10 +158,8 @@ export const ContentPortfolio = styled.div`
     margin: -50% 0 0 -20%;
     font-weight: 500;
     font-size: 4rem;
-    color: ${paletas.Grafite};
-    animation-name: animateBackgroundTwo;
-    animation-duration: 90s;
-    animation-iteration-count: infinite;
+    color: ${paletas.CinzaClaro};
+    animation: animateBackgroundTwo 90s infinite;
 
     @keyframes animateBackgroundTwo {
       0% {

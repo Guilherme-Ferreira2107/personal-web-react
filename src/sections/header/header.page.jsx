@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { WiMoonAltWaxingCrescent1, WiDaySunny } from "react-icons/wi";
+import { paletas } from "../../styled/theme";
 
 import {
   WrapperHeader,
@@ -10,7 +12,7 @@ import {
   NavbarCollapseMobile,
 } from "./styles";
 
-export default function Header() {
+export default function Header({ toggleTheme, isDarkTheme }) {
   const [offset, setOffset] = useState(0);
   const [classScroll, setClassScroll] = useState("");
   const [toogleMenu, setToogleMenu] = useState(false);
@@ -44,6 +46,22 @@ export default function Header() {
             <li>
               <a href="#contacts">CONTATOS</a>
             </li>
+            <li>
+              <button onClick={toggleTheme}>
+                {isDarkTheme ? (
+                  <span aria-label="Light mode" role="img">
+                    <WiDaySunny size={20} color="yellow" />
+                  </span>
+                ) : (
+                  <span aria-label="Dark mode" role="img">
+                    <WiMoonAltWaxingCrescent1
+                      size={20}
+                      color={paletas.BlueLight}
+                    />
+                  </span>
+                )}
+              </button>
+            </li>
           </ul>
         </NavbarCollapse>
       </NavbarDesktop>
@@ -51,6 +69,14 @@ export default function Header() {
       <NavbarMobile>
         {toogleMenu ? (
           <NavbarCollapseMobile className={classScroll}>
+            <div className="onClose">
+              <button
+                aria-label="Close menu"
+                onClick={() => setToogleMenu(!toogleMenu)}
+              >
+                <AiOutlineClose color="white" />
+              </button>
+            </div>
             <ul>
               <li>
                 <a onClick={() => setToogleMenu(false)} href="#TOP">
@@ -71,6 +97,11 @@ export default function Header() {
                 <a onClick={() => setToogleMenu(false)} href="#contacts">
                   CONTATOS
                 </a>
+              </li>
+              <li>
+                <button onClick={toggleTheme}>
+                  TEMA: {isDarkTheme ? "DARK" : "LIGHT"}
+                </button>
               </li>
             </ul>
           </NavbarCollapseMobile>
