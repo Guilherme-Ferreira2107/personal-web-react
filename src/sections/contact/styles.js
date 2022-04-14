@@ -123,11 +123,13 @@ export const ContentContacts = styled.div`
   }
 
   p,
+  a,
   h4 {
     font-size: 1.5rem;
   }
 
-  p {
+  p,
+  a {
     margin-bottom: 10px;
   }
 
@@ -137,7 +139,6 @@ export const ContentContacts = styled.div`
 
   a:hover {
     transition: all 0.25s linear;
-
     color: ${paletas.BlueLight};
   }
 `;

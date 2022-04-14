@@ -6,6 +6,11 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.fonts};
     transition: all 0.15s ease-in;
   }
+
+  a {
+    transition: all 3s linear;
+    color: ${({ theme }) => theme.fonts};
+  }
 `;
 
 export const paletas = {
