@@ -12,9 +12,13 @@ export const WrapperPortfolio = styled.section`
 
 export const ContentPortfolio = styled.div`
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 2fr);
+  gap: 20px;
+  grid-template-columns: auto;
+  justify-content: stretch;
+
   margin: auto;
   max-width: 900px;
 
@@ -61,13 +65,26 @@ export const ContentPortfolio = styled.div`
       }
     }
 
-    &.single-one-line {
-      width: 100%;
-      max-width: 100%;
-    }
-
     @media (min-width: 465px) {
       width: 100%;
+
+      &:nth-child(1) {
+        width: 100%;
+        grid: 100%;
+        grid-column: span 2;
+      }
+
+      &:nth-child(4) {
+        width: 100%;
+        grid-row: span 2;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(6) {
+        width: 100%;
+      }
     }
 
     @media (min-width: 768px) {
@@ -97,6 +114,8 @@ export const ContentPortfolio = styled.div`
       left: 0;
       top: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       z-index: -1;
       transition: all 0.25s linear;
       filter: grayscale(1) brightness(0.2) blur(2px);

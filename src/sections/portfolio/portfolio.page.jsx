@@ -74,12 +74,9 @@ export default function Portfolio() {
         {portfolios.map((item, idx) => (
           <div
             key={idx}
-            className={`
-            ${inView ? `animation` : ""}
-            ${inView ? `animation-${idx}` : ""}
-            ${idx === 0 ? "single-one-line" : ""}
-            ${idx === 3 ? "single-one-line" : ""}
-            `}
+            className={`${inView ? `animation` : ""}${
+              inView ? `animation-${idx}` : ""
+            }`}
           >
             <a href={item.url} target="_blank" rel="noreferrer">
               <img
