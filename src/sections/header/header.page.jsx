@@ -59,10 +59,7 @@ export default function Header({ toggleTheme, isDarkTheme }) {
                   </span>
                 ) : (
                   <span aria-label="Dark mode" role="img">
-                    <WiMoonAltWaxingCrescent1
-                      size={20}
-                      color={paletas.BlueLight}
-                    />
+                    <WiMoonAltWaxingCrescent1 size={20} color={paletas.White} />
                   </span>
                 )}
               </button>

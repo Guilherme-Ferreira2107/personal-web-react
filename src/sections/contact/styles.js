@@ -3,11 +3,11 @@ import { paletas } from "../../styled/theme";
 
 export const WrapperContact = styled.section`
   width: 100%;
-  padding: 80px 20px;
+  padding: 80px 20px 20px;
   transition: all 0.25s linear;
 
   @media (min-width: 768px) {
-    padding: 80px 100px;
+    padding: 80px 100px 20px;
   }
 `;
 
