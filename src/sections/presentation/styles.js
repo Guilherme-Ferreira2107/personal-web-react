@@ -158,27 +158,12 @@ export const ContentPresentation = styled.div`
     position: relative;
     font-weight: 500;
     font-size: 3rem;
-    background: linear-gradient(
-      160deg,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.2) 60%,
-      rgba(0, 0, 0, 0.8)
-    );
+    background-color: rgba(0, 0, 0, 0.8);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 0.4rem;
     line-height: 2.5rem;
-    animation: animateTitle 2s linear;
-
-    @keyframes animateTitle {
-      0% {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-      50% {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-    }
 
     @media (min-width: 465px) {
       font-size: 6rem;
@@ -219,7 +204,7 @@ export const ContentArrow = styled.div`
     @keyframes animationArrow {
       0% {
         opacity: 0;
-        margin-bottom: 140px;
+        margin-bottom: 120px;
       }
       100% {
         opacity: 1;
@@ -229,6 +214,11 @@ export const ContentArrow = styled.div`
 
   svg {
     font-size: 3rem;
-    color: ${paletas.White50};
+    transition: all 0.25s linear;
+    color: ${paletas.White20};
+
+    &:hover {
+      color: ${paletas.White50};
+    }
   }
 `;

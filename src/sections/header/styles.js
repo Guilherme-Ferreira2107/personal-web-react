@@ -45,7 +45,10 @@ export const NavbarHeader = styled.div`
 
   &.scroll-active {
     opacity: 1;
-    color: ${paletas.White50};
+
+    a {
+      color: ${paletas.White50};
+    }
   }
 `;
 

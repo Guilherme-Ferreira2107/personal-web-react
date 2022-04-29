@@ -38,17 +38,30 @@ export const ContentPortfolio = styled.div`
 
       h4 {
         transform: scale(1);
-        transition: all 0.15s linear;
+        transition: all 0.25s linear;
       }
 
       img {
-        transform: scale(1.05);
+        transition: all 0.25s linear;
         filter: grayscale(0) brightness(0.25) blur(0px);
+        animation: bg-rotate 20s infinite;
       }
 
       .link-page {
         transition: all 0.15s linear;
         margin-bottom: 0px;
+      }
+    }
+
+    @keyframes bg-rotate {
+      0% {
+        transform: scaleX(1);
+      }
+      50% {
+        transform: scaleX(1.5);
+      }
+      100% {
+        transform: scaleX(1);
       }
     }
 
@@ -99,6 +112,7 @@ export const ContentPortfolio = styled.div`
       color: ${paletas.White};
       margin: 10px 0 30px;
       transform: scale(0.9);
+      transition: all 0.25s linear;
     }
 
     p {

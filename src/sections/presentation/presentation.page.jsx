@@ -55,7 +55,9 @@ export default function Presentation() {
           <span className="ml12 pr-12">CARINHO POR CADA LINHA DE CÓDIGO</span>
         </div>
         <ContentArrow>
-          <BsArrowDown className={inView ? "animation" : ""} />
+          <a href="#about" alt="go-about">
+            <BsArrowDown className={inView ? "animation" : ""} />
+          </a>
         </ContentArrow>
       </ContentPresentation>
     </WrapperPresentation>

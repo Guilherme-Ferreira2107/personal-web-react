@@ -21,7 +21,6 @@ export const ContentNamePanel = styled.div`
     transform: rotate(-90deg);
 
     p {
-      /* color: ${paletas.White50}; */
       font-size: 1.4rem;
       letter-spacing: 0.15rem;
     }
@@ -47,11 +46,12 @@ export const VerticalDivisor = styled.div`
   &:after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 50%;
+    margin-bottom: 10px;
     height: 30px;
     width: 1px;
-    background-color: ${paletas.White50};
+    background-color: ${paletas.White20};
   }
 `;
 
@@ -63,19 +63,31 @@ export const SocialList = styled.ul`
     margin: 10px 0;
 
     a {
-      transition: all 0.3s linear;
+      transition: all 0.25s linear;
       filter: grayscale(1);
+      opacity: 0.4;
 
       &:hover {
-        filter: grayscale(0);
+        opacity: 1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 30px;
+        max-height: 30px;
+        margin-top: 0px;
+        animation: animation-icons 1.5s ease-out;
       }
     }
+  }
 
-    a img {
-      width: 100%;
-      height: 100%;
-      max-width: 30px;
-      max-height: 30px;
+  @keyframes animation-icons {
+    0% {
+      margin-top: 30px;
+    }
+    100% {
+      margin-top: 0px;
     }
   }
 `;
