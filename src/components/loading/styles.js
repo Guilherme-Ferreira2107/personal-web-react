@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const WrapperLoading = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+
   .sk-cube-grid {
     width: 40px;
     height: 40px;

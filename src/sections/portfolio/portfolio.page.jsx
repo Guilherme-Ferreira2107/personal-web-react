@@ -9,6 +9,7 @@ import proTrader from "../../assets/images/ptrader-example.png";
 import virta from "../../assets/images/virta-example.png";
 import logoGdat from "../../assets/images/gdat-all.png";
 import logoDryve from "../../assets/images/dryve-example.png";
+import logoVieiraGally from "../../assets/images/portfolio-vieira-gally.png";
 
 const TitleComponent = loadable(() =>
   import("../../components/title/title.components")
@@ -63,6 +64,13 @@ export default function Portfolio() {
       title: "DRYVE",
       description: "Challenger Dryve. Desafio proposto pela Dryve.",
       url: "https://dryve-challenge.surge.sh/",
+      link: "VISITAR PÁGINA",
+    },
+    {
+      logo: logoVieiraGally,
+      title: "Vieria Gally Advogados",
+      description: "Single page sob medida para uma agência de advocacia.",
+      url: "https://nextjs-vieira-gally.vercel.app/",
       link: "VISITAR PÁGINA",
     },
   ];

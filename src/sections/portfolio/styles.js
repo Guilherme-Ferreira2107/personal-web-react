@@ -81,7 +81,8 @@ export const ContentPortfolio = styled.div`
     @media (min-width: 465px) {
       width: 100%;
 
-      &:nth-child(1) {
+      &:nth-child(1),
+      &:nth-child(7) {
         width: 100%;
         grid: 100%;
         grid-column: span 2;

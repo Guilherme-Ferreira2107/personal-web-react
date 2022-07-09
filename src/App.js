@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import loadable from "@loadable/component";
 
@@ -22,19 +22,30 @@ function App() {
   const [theme, setTheme] = useState("dark");
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => setTheme(isDarkTheme ? "light" : "dark");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
 
   return (
     <Suspense fallback={renderLoader()}>
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-        <Wrapper>
-          <GlobalStyles />
-          <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-          <Presentation />
-          <About />
-          <Portfolio />
-          <Contact />
-          <Footer />
-        </Wrapper>
+        {!isLoading ? (
+          <Wrapper>
+            <GlobalStyles />
+            <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+            <Presentation />
+            <About />
+            <Portfolio />
+            <Contact />
+            <Footer />
+          </Wrapper>
+        ) : (
+          <Loading />
+        )}
       </ThemeProvider>
     </Suspense>
   );
