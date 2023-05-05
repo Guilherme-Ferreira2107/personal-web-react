@@ -32,14 +32,14 @@ const About = () => {
             Olá, prazer em conhecer você!
             <br />
             <br />
-            Me chamo Guilherme e sou desenvolvedor web
+            Me chamo Guilherme e sou desenvolvedor web e mobile
             <br />
             <span>
-              {"["}React.js, React Native, Next.js, Angular, Node.js{"]"}
+              {"["}ReactJS/NextJs, React Native, Angular 8+, NodeJS/NestJS{"]"}
             </span>
             <br />
             <br />
-            Desde 2017, venho estudando e aplicando todo o conhecimento
+            Desde 2012, venho estudando e aplicando todo o conhecimento
             <br />
             adquirido em construções de aplicações web e mobile no meu
             cotidiano.
