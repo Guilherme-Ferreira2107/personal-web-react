@@ -4,7 +4,7 @@ import loadable from "@loadable/component";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 
-import perfil from "@/assets/perfil_1.png";
+import perfil from "@/assets/perfil_1.webp";
 
 import {
   WrapperAbout,

@@ -6,13 +6,13 @@ import Image, { StaticImageData } from "next/image";
 
 import { WrapperPortfolio, ContentPortfolio } from "./styles";
 
-import logoBatalhaDev from "@/assets/bdev-example.png";
+import logoBatalhaDev from "@/assets/bdev-example.webp";
 import logoHelppy from "@/assets/hellpy-example.png";
-import proTrader from "@/assets/ptrader-example.png";
-import virta from "@/assets/virta-example.png";
-import logoGdat from "@/assets/gdat-all.png";
-import logoDryve from "@/assets/dryve-example.png";
-import logoVieiraGally from "@/assets/portfolio-vieira-gally.png";
+import proTrader from "@/assets/ptrader-example.webp";
+import virta from "@/assets/virta-example.webp";
+import logoGdat from "@/assets/gdat-all.webp";
+import logoDryve from "@/assets/dryve-example.webp";
+import logoVieiraGally from "@/assets/portfolio-vieira-gally.webp";
 
 const TitleComponent = loadable(() => import("@/components/UI/Title"));
 

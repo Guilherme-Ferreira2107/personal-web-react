@@ -10,8 +10,8 @@ import {
   VerticalDivisor,
 } from "./styles";
 
-import iconLinkedin from "@/assets/linkedin.png";
-import iconWhatsapp from "@/assets/whatsapp.png";
+import iconLinkedin from "@/assets/linkedin.webp";
+import iconWhatsapp from "@/assets/whatsapp.webp";
 import iconGithub from "@/assets/github.png";
 
 const Aside: React.FC = () => {
