@@ -55,18 +55,15 @@ export const ContentPortfolio = styled.div`
 
     @keyframes bg-rotate {
       0% {
-        transform: scaleX(1);
-      }
-      50% {
-        transform: scaleX(1.5);
+        transform: scale(1);
       }
       100% {
-        transform: scaleX(1);
+        transform: scale(1.3);
       }
     }
 
     &.animation {
-      animation: animatePortfolio 2s linear;
+      animation: animatePortfolio 0.5s linear;
 
       @keyframes animatePortfolio {
         0% {

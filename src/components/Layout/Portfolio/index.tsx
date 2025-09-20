@@ -8,11 +8,11 @@ import { WrapperPortfolio, ContentPortfolio } from "./styles";
 
 import logoBatalhaDev from "@/assets/bdev-example.webp";
 import logoHelppy from "@/assets/hellpy-example.png";
-import proTrader from "@/assets/ptrader-example.webp";
 import virta from "@/assets/virta-example.webp";
-import logoGdat from "@/assets/gdat-all.webp";
-import logoDryve from "@/assets/dryve-example.webp";
-import logoVieiraGally from "@/assets/portfolio-vieira-gally.webp";
+import printSilk from "@/assets/print-silk.webp";
+import printAd from "@/assets/print-ad-promessas.webp";
+import printDiagnostiquei from "@/assets/print-diagnostiquei.webp";
+import printM3 from "@/assets/print-m3.webp";
 
 const TitleComponent = loadable(() => import("@/components/UI/Title"));
 
@@ -31,6 +31,38 @@ export function Portfolio() {
 
   const portfolios: PortfolioItem[] = [
     {
+      logo: printM3,
+      title: "M3 Digital Solutions",
+      description:
+        "Site para captação de usuários interessados em estampas personalizadas.",
+      url: "https://silkestampa.vercel.app/",
+      link: "VISITAR PÁGINA",
+    },
+    {
+      logo: printDiagnostiquei,
+      title: "Diagnostiquei",
+      description:
+        "Aplicação que ajuda pessoas a identificarem sintomas mentais.",
+      url: "https://diagnostiquei.com/",
+      link: "VISITAR PÁGINA",
+    },
+    {
+      logo: printAd,
+      title: "Assembléia de Deus - Promessas",
+      description:
+        "WebSite para captação de pessoas com necessidades espirituais.",
+      url: "https://ad-promessas-zs.vercel.app/",
+      link: "VISITAR PÁGINA",
+    },
+    {
+      logo: printSilk,
+      title: "SilkEstampa",
+      description:
+        "Site para captação de usuários interessados em estampas personalizadas.",
+      url: "https://silkestampa.vercel.app/",
+      link: "VISITAR PÁGINA",
+    },
+    {
       logo: logoBatalhaDev,
       title: "BATALHA DEV",
       description: "Batalha Dev é um jogo feito para amantes da lógica.",
@@ -46,40 +78,11 @@ export function Portfolio() {
       link: "VISITAR PÁGINA",
     },
     {
-      logo: proTrader,
-      title: "PRO TRADER INVESTING",
-      description:
-        "Aplicação web que gerencia e realiza rápidos cálculos para investidores do mercado de Opções Binárias.",
-      url: "https://app-protrader.herokuapp.com/",
-      link: "VISITAR PÁGINA",
-    },
-    {
       logo: virta,
       title: "MONITORAMENTO VIRTA",
       description:
         "Aplicativo mobile para monitoramento de notícias em tempo real.",
       url: "https://play.google.com/store/apps/details?id=br.com.grupovirta.monitoramento",
-      link: "VISITAR PÁGINA",
-    },
-    {
-      logo: logoGdat,
-      title: "ASSISTÊNCIA WEB",
-      description: "Aplicação simplificada para controle e gestão de estoque.",
-      url: "https://gdat.surge.sh/",
-      link: "VISITAR PÁGINA",
-    },
-    {
-      logo: logoDryve,
-      title: "DRYVE",
-      description: "Challenger Dryve. Desafio proposto pela Dryve.",
-      url: "https://dryve-challenge.surge.sh/",
-      link: "VISITAR PÁGINA",
-    },
-    {
-      logo: logoVieiraGally,
-      title: "Vieira Gally Advogados",
-      description: "Single page sob medida para uma agência de advocacia.",
-      url: "https://nextjs-vieira-gally.vercel.app/",
       link: "VISITAR PÁGINA",
     },
   ];
